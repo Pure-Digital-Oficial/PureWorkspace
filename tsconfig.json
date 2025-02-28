@@ -5,6 +5,12 @@
   "references": [
     {
       "path": "./apps/web/web-pure-digital"
+    },
+    {
+      "path": "./apps/server/server-pure-general-e2e"
+    },
+    {
+      "path": "./apps/server/server-pure-general"
     }
   ]
 }

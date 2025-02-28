@@ -1,0 +1,52 @@
+{
+  "name": "@pure-workspace/server-pure-general",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "server-pure-general",
+    "projectType": "application",
+    "sourceRoot": "apps/server/server-pure-general/src",
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "webpack-cli build",
+          "args": [
+            "node-env=production"
+          ]
+        },
+        "configurations": {
+          "development": {
+            "args": [
+              "node-env=development"
+            ]
+          }
+        }
+      },
+      "serve": {
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "development",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "server-pure-general:build",
+          "runBuildTargetDependencies": false
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "server-pure-general:build:development"
+          },
+          "production": {
+            "buildTarget": "server-pure-general:build:production"
+          }
+        }
+      },
+      "test": {
+        "options": {
+          "passWithNoTests": true
+        }
+      }
+    }
+  }
+}
