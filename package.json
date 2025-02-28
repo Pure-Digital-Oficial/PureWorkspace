@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:web-pure-digital": "nx run web-pure-digital:serve"
+    "start:web-pure-digital": "nx run web-pure-digital:serve",
+    "test": "nx run-many -t test"
   },
   "private": true,
   "devDependencies": {
