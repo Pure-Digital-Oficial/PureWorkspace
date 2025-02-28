@@ -59,7 +59,8 @@
   "workspaces": [
     "packages/*",
     "apps/web/*",
-    "apps/server/*"
+    "apps/server/*",
+    "libs/*"
   ],
   "dependencies": {
     "@nestjs/common": "^10.0.2",

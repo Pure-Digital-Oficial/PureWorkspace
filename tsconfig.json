@@ -11,6 +11,9 @@
     },
     {
       "path": "./apps/server/server-pure-general"
+    },
+    {
+      "path": "./libs/domain"
     }
   ]
 }
