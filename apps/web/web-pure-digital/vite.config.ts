@@ -7,7 +7,7 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../../node_modules/.vite/apps/web/web-pure-digital',
   server: {
-    port: 4200,
+    port: parseInt(process.env['WEB_PURE_DIGITAL_PORT'] ?? '4200'),
     host: 'localhost',
   },
   preview: {
@@ -29,8 +29,14 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@pureWorkspace/feature': path.resolve(__dirname, '../../../libs/feature/src/index.ts'),
-      '@pureWorkspace/domain': path.resolve(__dirname, '../../../libs/domain/src/index.ts'),
+      '@pureWorkspace/feature': path.resolve(
+        __dirname,
+        '../../../libs/feature/src/index.ts'
+      ),
+      '@pureWorkspace/domain': path.resolve(
+        __dirname,
+        '../../../libs/domain/src/index.ts'
+      ),
     },
   },
 });
