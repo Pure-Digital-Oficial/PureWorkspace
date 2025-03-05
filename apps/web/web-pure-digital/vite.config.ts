@@ -1,6 +1,7 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   root: __dirname,
@@ -24,6 +25,12 @@ export default defineConfig({
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
+    },
+  },
+  resolve: {
+    alias: {
+      '@pureWorkspace/feature': path.resolve(__dirname, '../../../libs/feature/src/index.ts'),
+      '@pureWorkspace/domain': path.resolve(__dirname, '../../../libs/domain/src/index.ts'),
     },
   },
 });

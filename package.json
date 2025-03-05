@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start:web-pure-digital": "nx run web-pure-digital:serve",
+    "build:web-pure-digital": "nx build web-pure-digital",
     "test": "nx run-many -t test"
   },
   "private": true,
